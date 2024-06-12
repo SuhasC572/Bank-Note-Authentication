@@ -4,15 +4,23 @@ import pandas as pd
 import pickle
 import flasgger
 from flasgger import Swagger
-
-from sklearn.base import is_classifier
+import joblib
+import pickle
 
 app = Flask(__name__)
 Swagger(app)
-pickle_in = open('classifier.pkl', 'rb')
-classifier = pickle.load(pickle_in)
+# pickle_in = open('classifier.pkl', 'rb')
+# classifier = pickle.load(pickle_in)
+classifier = joblib.load('classifier2.pkl')
 
+# class CustomUnpickler(pickle.Unpickler):
+#     def find_class(self, module, name):
+#         if module == 'sklearn.ensemble._forest':
+#             module = 'sklearn.ensemble._base'
+#         return super().find_class(module, name)
 
+# with open('classifier2.pkl', 'rb') as f:
+#     classifier = CustomUnpickler(f).load()
 
 @app.route('/')
 def welcome():
