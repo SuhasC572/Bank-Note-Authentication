@@ -73,6 +73,11 @@ docker run -p 5000:5000 flask_ml_api
 
 This allows you to access the Flask application via [http://localhost:5000](http://localhost:5000).
 
+
+## Preview
+![image](https://github.com/SuhasC572/Bank-Note-Authentication/assets/84210024/bbd73820-49b8-4ecb-8fad-f9668bf55790)
+![image](https://github.com/SuhasC572/Bank-Note-Authentication/assets/84210024/963d16ae-556a-4098-ab6a-2305a683a49b)
+
 ## Application Structure
 
 - **Dockerfile**: Sets up the Anaconda environment, copies application files, and specifies the command to run the Flask server.
